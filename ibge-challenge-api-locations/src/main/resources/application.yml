@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ibge-challenge-api-locations
+
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: localhost
+    port: 9000
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
